@@ -1,0 +1,2 @@
+$('#categories').append('<%= escape_javascript render(@categories) %>');
+$('.pagination').replaceWith('<%= escape_javascript will_paginate(@categories) %>');
