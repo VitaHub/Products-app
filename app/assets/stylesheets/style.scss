@@ -2,12 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body,
-#categories {
+#categories,
+#products {
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   counter-reset: section;
+}
+
+.category {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.with-position {
+  h4::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+  }
 }
 
 .pagination {
@@ -45,6 +59,9 @@ body,
   .content {
     padding: 10px;
     vertical-align: top;
+    .price::before {
+      content: "$";
+    }
   }
 }
 

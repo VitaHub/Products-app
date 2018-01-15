@@ -1,0 +1,13 @@
+<div class='card with-position'>
+  <%= link_to product.url, target: :_blank do %>
+    <div class='container'>
+      <div class='image'>
+        <%= image_tag(product.image, alt: product.name) %>
+      </div>
+      <div class='content'>
+        <h4><%= product.name %></h4>
+        <p class='price'><%= product.price %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

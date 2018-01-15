@@ -1,0 +1,7 @@
+<div class='category'>
+  <h2><%= @category.name %></h2>
+</div>
+<div id='products'>
+  <%= render @products %>
+</div>
+<%= will_paginate @products %>
