@@ -23,7 +23,7 @@ $(document).ready(function() {
       var url = $(".pagination .next_page").attr("href");
       if (
         url &&
-        $(window).scrollTop() > $(document).height() - $(window).height() - 50
+        $(window).scrollTop() > $(document).height() - $(window).height() - 200
       ) {
         $(".pagination").text("Please Wait...");
         return $.getScript(url);
