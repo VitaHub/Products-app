@@ -17,4 +17,16 @@ ActiveRecord::Schema.define(version: 20180115184554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "products", force: :cascade do |t|
+    t.integer "category_id"
+    t.string "name", null: false
+    t.string "image", null: false
+    t.float "score", null: false
+    t.float "price", null: false
+    t.string "url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
+  end
 end
